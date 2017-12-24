@@ -2,13 +2,24 @@ package com.configuration;
 
 import java.util.Properties;
 
+
 import javax.sql.DataSource;
 
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.domain.User1;
+
+@Configuration
+@ComponentScan("com")
+@EnableTransactionManagement
 public class Hiberconfiguration 
 {
 	@Autowired
@@ -16,8 +27,8 @@ public class Hiberconfiguration
 	public DataSource getH2Data()
 	{
 	DriverManagerDataSource dsource=new DriverManagerDataSource();
-	dsource.setDriverClassName("");
-	dsource.seturl("");
+	dsource.setDriverClassName("org.h2.Driver");
+	dsource.setUrl("jdbc:h2:tcp://localhost/~/furniturefrontend");
 	dsource.setUsername("sa");
 	dsource.setPassword(""); 
 	System.out.println("h2 connected");
@@ -35,14 +46,14 @@ private Properties getHiber()
 	System.out.println("table created");
 	return p;
 }
-
+ 
 	@Autowired
 	@Bean(name="sessionFactory")
 	public SessionFactory getHiberSession(DataSource datasource)
 	{
 		LocalSessionFactoryBuilder lsfb=new LocalSessionFactoryBuilder(datasource);
 		lsfb.addProperties(getHiber());
-		lsfb.addAnnotedClass(User1.class);
+		lsfb.addAnnotatedClass(User1.class);
 		return lsfb.buildSessionFactory();
 				
 	}
@@ -57,23 +68,9 @@ private Properties getHiber()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
-
+}
 
 
 

@@ -6,11 +6,12 @@ import javax.persistence.*;
 
 import org.springframework.stereotype.Component;
 
-@Component;
-@Entity;
-
+@Component 
+@Entity
 public class User1 implements Serializable
 {
+	
+	@Id
 	public String getEmail() {
 		return email;
 	}
@@ -49,7 +50,6 @@ public class User1 implements Serializable
 	}
 	@Id
 	private String email;
-	private int id;
 	private String name;
 	private String password;
 	
