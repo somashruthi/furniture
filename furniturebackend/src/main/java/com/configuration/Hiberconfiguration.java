@@ -15,6 +15,8 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.domain.Category;
+import com.domain.Supplier;
 import com.domain.User1;
 
 @Configuration
@@ -54,6 +56,8 @@ private Properties getHiber()
 		LocalSessionFactoryBuilder lsfb=new LocalSessionFactoryBuilder(datasource);
 		lsfb.addProperties(getHiber());
 		lsfb.addAnnotatedClass(User1.class);
+		lsfb.addAnnotatedClass(Supplier.class);
+		lsfb.addAnnotatedClass(Category.class);
 		return lsfb.buildSessionFactory();
 				
 	}
@@ -71,31 +75,3 @@ private Properties getHiber()
 }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
