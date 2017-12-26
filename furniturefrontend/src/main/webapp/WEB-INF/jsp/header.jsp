@@ -14,62 +14,6 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <body>
 
 <nav id="navbar-red" class=navbar navbar-inverse navbar-static-top role="navigation">
@@ -88,6 +32,8 @@
           <li><a href="contact"><i class="fa fa-address-book" aria -hidden="true"></i></a></li>
           <li><a href="productList">Productlist</a></li>
            <li><a href="Admin">Admin</a>
+           <li><a href="gotoRegister">Register</a>
+           
         </ul>
       </li>
       <li><a href="#">Page 2</a></li>
@@ -106,3 +52,4 @@
 
 </body>
 </html>
+

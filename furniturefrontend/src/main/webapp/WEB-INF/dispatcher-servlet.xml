@@ -11,12 +11,13 @@ http://www.springframework.org/schema/mvc
 http://www.springframework.org/schema/mvc/spring-mvc.xsd
 http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-<mvc:default-servlet-handler/>
-<mvc:annotationd-driven/></mvc:annotationd-driven>
+	<mvc:default-servlet-handler/>
+		<mvc:annotation-driven>
 <context:component-scan base-package="com.controller"/></context:component-scan>
 <context:component-scan base-package="com.*"/></context:component-scan>
 
 <mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
+</mvc:annotation-driven>
 
     <bean id="viewResolver"
     	class="org.springframework.web.servlet.view.InternalResourceViewResolver" >

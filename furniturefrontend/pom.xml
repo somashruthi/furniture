@@ -21,11 +21,7 @@
   <version>0.0.1-SNAPSHOT</version>
   </dependency>
   
-  
-  
-  
-  
-
+ 
   <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 <dependency>
     <groupId>javax.servlet</groupId>
@@ -63,16 +59,7 @@
     <artifactId>spring-security-web</artifactId>
     <version>4.2.3.RELEASE</version>
 </dependency>
-
-
-
-
-
-
-
-
-  
-  
+ 
   <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 <dependency>
     <groupId>org.springframework</groupId>
@@ -103,6 +90,15 @@
     <artifactId>spring-web</artifactId>
     <version>4.3.12.RELEASE</version>
 </dependency>
+
+
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-tx</artifactId>
+    <version>4.3.9.RELEASE</version>
+</dependency>
+
 
 
 
