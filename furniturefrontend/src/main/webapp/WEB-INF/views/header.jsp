@@ -19,7 +19,7 @@
 <nav id="navbar-red" class=navbar navbar-inverse navbar-static-top role="navigation">
   <div class="container">
     <ul class="nav navbar-nav">
-    <button type="button" class="navbar-toggle collasped" dta-toggle="collapse" data-target="#navDemo">
+    <button type="button" class="navbar-toggle collasped" data-toggle="collapse" data-target="#navDemo">
     <span class="icon-bar"></span>
      <span class="icon-bar"></span> 
      <span class="icon-bar"></span></button>>

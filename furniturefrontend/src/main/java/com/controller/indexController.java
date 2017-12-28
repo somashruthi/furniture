@@ -34,12 +34,21 @@ public class indexController
 
 	
 	@RequestMapping(value="/saveRegister", method=RequestMethod.POST)
-	public ModelAndView saveRegister(@ModelAttribute("user1")User1 user1)
+	public ModelAndView saveRegister(@ModelAttribute ("user1")User1 user1,BindingResult result)
 	{
 		ModelAndView mav=new ModelAndView();
+		
+	if(result.hasErrors())
+	{
+		mav.setViewName("register")
+	}
+		
+	else
+	{
 		user1.setRole("ROLE USER");
 		userDaoImpl.insertUser(user1);
 		mav.setViewName("index");
+	}
 		return mav;
 		
 	} 

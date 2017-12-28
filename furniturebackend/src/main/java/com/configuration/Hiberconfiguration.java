@@ -26,6 +26,7 @@ public class Hiberconfiguration
 {
 	@Autowired
 	@Bean("name=datasource")
+	
 	public DataSource getH2Data()
 	{
 	DriverManagerDataSource dsource=new DriverManagerDataSource();
