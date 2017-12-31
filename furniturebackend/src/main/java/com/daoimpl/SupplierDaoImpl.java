@@ -10,8 +10,8 @@ import com.dao.*;
 import com.domain.Supplier;
 
 
-@Repository
-@Service
+@Repository("supplierDAO")
+
 public class SupplierDaoImpl implements SupplierDao
 {
 	@Autowired

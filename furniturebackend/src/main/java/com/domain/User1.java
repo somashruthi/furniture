@@ -10,8 +10,16 @@ import org.springframework.stereotype.Component;
 @Entity
 public class User1 implements Serializable
 {
-	
 	@Id
+	private String email;
+	private String name;
+	private String password;
+	private String address;
+	private String phone;
+	private String role;
+	private boolean enabled;
+	
+	
 	public String getEmail() {
 		return email;
 	}
@@ -48,13 +56,16 @@ public class User1 implements Serializable
 	public void setRole(String role) {
 		this.role = role;
 	}
-	@Id
-	private String email;
-	private String name;
-	private String password;
 	
-	private String address;
-	private String phone;
-	private String role;
+	public boolean isEnabled() {
+		return enabled;
+	}
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+	
+	
+	
+	
 
 }

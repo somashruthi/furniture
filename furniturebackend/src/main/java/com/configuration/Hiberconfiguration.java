@@ -15,6 +15,9 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.daoimpl.CategoryDaoImpl;
+import com.daoimpl.SupplierDaoImpl;
+import com.daoimpl.UserDaoImpl;
 import com.domain.Category;
 import com.domain.Supplier;
 import com.domain.User1;
@@ -37,7 +40,7 @@ public class Hiberconfiguration
 	System.out.println("h2 connected");
 	return dsource;
 	
-}
+	}
 
 private Properties getHiber()
 {
@@ -46,7 +49,7 @@ private Properties getHiber()
 	p.put("hibernate.hbm2ddl.auto", "update");
 	p.put("hibernate.show_sql", "true");
 
-	System.out.println("table created");
+	System.out.println("Table created.........");
 	return p;
 }
  
@@ -57,11 +60,36 @@ private Properties getHiber()
 		LocalSessionFactoryBuilder lsfb=new LocalSessionFactoryBuilder(datasource);
 		lsfb.addProperties(getHiber());
 		lsfb.addAnnotatedClass(User1.class);
+		System.out.println("SESSION FACTORY CREATED........");
 		lsfb.addAnnotatedClass(Supplier.class);
 		lsfb.addAnnotatedClass(Category.class);
 		return lsfb.buildSessionFactory();
 				
 	}
+	
+	@Autowired
+	@Bean(name="UserDaoImpl")
+	public  UserDaoImpl saveUserData(SessionFactory sf)
+	{
+		return new UserDaoImpl(sf);
+	}
+	
+	@Autowired
+	@Bean(name="SupplierDaoImpl")
+	public  SupplierDaoImpl saveSuppData(SessionFactory sf)
+	{
+		return new SupplierDaoImpl(sf);
+	}
+	
+	
+	@Autowired
+	@Bean(name="CategoryDaoImpl")
+	public  CategoryDaoImpl saveCatData(SessionFactory sf)
+	{
+		return new CategoryDaoImpl(sf);
+	}
+	
+	
 	
 	@Autowired
 	@Bean(name="transactionManager")

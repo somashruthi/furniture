@@ -5,7 +5,7 @@ import com.domain.Supplier;
 public interface SupplierDao 
 {
 
-	public void insertSupplier(Supplier supplier);
+	public boolean insertSupplier(Supplier supplier);
 	
 }
  

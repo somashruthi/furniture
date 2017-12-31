@@ -11,8 +11,8 @@ import com.dao.*;
 import com.dao.CategoryDao;
 import com.domain.Category;
 
-@Repository
-@Service
+@Repository("categoryDAO")
+
 public class CategoryDaoImpl implements CategoryDao
 {
 	
