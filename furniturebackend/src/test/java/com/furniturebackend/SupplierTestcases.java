@@ -1,43 +1,46 @@
-package com.textcases;
+package com.furniturebackend;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import com.dao.SupplierDao;
+import com.dao.SupplierDAO;
 import com.domain.Supplier;
+//import com.domain.Supplier;
 
 public class SupplierTestcases
 {
-static SupplierDao supplierDao;
+	
+	
+	static SupplierDAO supplierDAO;
 	
 	@BeforeClass
 	public static void initialize()
 	{
-		System.out.println("Starting into Initiailze User Test case ");
+		System.out.println("Starting into Initiailze Supplier Test case ");
 		
 		AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext();
 		
 		context.scan("com");
 		context.refresh();
-		supplierDao=(SupplierDao)context.getBean("supplierDao");
+		supplierDAO=(SupplierDAO)context.getBean("supplierDAO");
 		System.out.println("Ending into Initialization user test case ");;
 		
 	
 	}
 
 	@Test
-	public void createSuppliertest()
+	public void createSupplierTest()
 	{
 		
-		System.out.println("Starting into creating User Test case ");
+		System.out.println("Starting into creating Supplier Test case ");
 		
 		Supplier supplier=new Supplier();
-		supplier.setSid(1235);
-		supplier.setSuppliername("shruthi");
+		supplier.setSid(5678);
+		supplier.setSuppliername("sweety");
 
 
-		assertTrue("problem in User", supplierDao.insertSupplier(supplier));
+		assertTrue("problem in Supplier", supplierDAO.addSupplier(supplier));
 		
 		System.out.println("Ending..... into Creating Supplier....");
 		

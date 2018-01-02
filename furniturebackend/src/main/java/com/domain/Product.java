@@ -1,3 +1,4 @@
+
 package com.domain;
 
 import java.io.Serializable;
@@ -53,13 +54,5 @@ public class Product implements Serializable
 	public void setStock(int stock) {
 		this.stock = stock;
 	}
-	
-
-	
-	
-	
-	
-	
-
-	
+		
 }

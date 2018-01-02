@@ -8,8 +8,12 @@ import org.springframework.stereotype.Component;
 
 @Component 
 @Entity
-public class User1 implements Serializable
+public class User implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	private String email;
 	private String name;

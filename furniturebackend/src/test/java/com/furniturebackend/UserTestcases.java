@@ -1,4 +1,4 @@
-package com.textcases;
+package com.furniturebackend;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.BeforeClass;
@@ -6,15 +6,16 @@ import org.junit.Test;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.dao.UserDao;
-import com.domain.User1;
+import com.dao.UserDAO;
+import com.domain.User;
 
 public class UserTestcases
 {
+
+
+	static UserDAO userDAO;
 	
-static UserDao userDao;
-	
-    @BeforeClass
+	@BeforeClass
 	public static void initialize()
 	{
 		System.out.println("Starting into Initiailze User Test case ");
@@ -23,7 +24,7 @@ static UserDao userDao;
 		
 		context.scan("com");
 		context.refresh();
-		userDao=(UserDao)context.getBean("userDao");
+		userDAO=(UserDAO)context.getBean("userDAO");
 		System.out.println("Ending into Initialization user test case ");;
 		
 	
@@ -34,7 +35,7 @@ static UserDao userDao;
 	{
 		
 		System.out.println("Starting into creating User Test case ");
-		User1 user=new User1();
+		User user=new User();
 		
 		user.setEmail("sruthi@gmail.com");
 		user.setName("sruthi");
@@ -44,11 +45,10 @@ static UserDao userDao;
 		user.setAddress("Dilsuknagar,Hyderabad");
 		user.setEnabled(true);
 				
-		assertTrue("problem in User", userDao.insertUser(user));
+		assertTrue("problem in User", userDAO.addUser(user));
 		
 		System.out.println("Ending..... into Createing User....");
 		
 	}
                                                                                                                                                                                                         
 }
-

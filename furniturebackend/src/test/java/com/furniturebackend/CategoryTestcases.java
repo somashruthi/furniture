@@ -1,4 +1,4 @@
-package com.textcases;
+package com.furniturebackend;
 
 import static org.junit.Assert.assertTrue;
 
@@ -6,14 +6,14 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.dao.CategoryDao;
+import com.dao.CategoryDAO;
 import com.domain.Category;
 
 
 
 public class CategoryTestcases 
 {
-static CategoryDao categoryDao;
+static CategoryDAO categoryDAO;
 	
 	@BeforeClass
 	public static void initialize()
@@ -24,8 +24,8 @@ static CategoryDao categoryDao;
 		
 		context.scan("com");
 		context.refresh();
-		categoryDao=(CategoryDao)context.getBean("categoryDao");
-		System.out.println("Ending into Initialization user test case ");;
+		categoryDAO=(CategoryDAO)context.getBean("categoryDAO");
+		System.out.println("Ending into Initialization user test case ");
 		
 	
 	}
@@ -41,7 +41,7 @@ static CategoryDao categoryDao;
 		category.setCname("shruthi");
 
 
-		assertTrue("problem in User", categoryDao.insertCategory(category));
+		assertTrue("problem in User", categoryDAO.addCategory(category));
 		
 		System.out.println("Ending..... into Creating Category....");
 		

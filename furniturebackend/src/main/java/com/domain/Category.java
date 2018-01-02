@@ -2,13 +2,7 @@ package com.domain;
 
 import java.io.Serializable;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 import org.springframework.stereotype.Component;
 
@@ -17,9 +11,14 @@ import org.springframework.stereotype.Component;
 
 public class Category implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	private int cid;
 	private String cname;
+	
 	public int getCid() {
 		return cid;
 	}
