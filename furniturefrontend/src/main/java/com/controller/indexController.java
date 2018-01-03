@@ -2,20 +2,21 @@ package com.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.daoimpl.UserDaoImpl;
-import com.domain.User1;
+import com.daoimpl.UserDAOImpl;
+import com.domain.User;
 
 @Controller
 public class indexController
 {
 
 	@Autowired
-	UserDaoImpl userDaoImpl;
+	UserDAOImpl userDAOImpl;
 	
 	@RequestMapping("/")
 	public String index()
@@ -27,26 +28,26 @@ public class indexController
 	public ModelAndView gotoRegister()
 	{
 		ModelAndView mv=new ModelAndView();
-		mv.addObject("user",new User1());
+		mv.addObject("user",new User());
 		mv.setViewName("register");
 		return mv;
 	}
 
 	
 	@RequestMapping(value="/saveRegister", method=RequestMethod.POST)
-	public ModelAndView saveRegister(@ModelAttribute ("user1")User1 user1,BindingResult result)
+	public ModelAndView saveRegister(@ModelAttribute ("user")User user,BindingResult result)
 	{
 		ModelAndView mav=new ModelAndView();
 		
 	if(result.hasErrors())
 	{
-		mav.setViewName("register")
+		mav.setViewName("register");
 	}
 		
 	else
 	{
-		user1.setRole("ROLE USER");
-		userDaoImpl.insertUser(user1);
+		user.setRole("ROLE USER");
+		userDAOImpl.addUser(user);
 		mav.setViewName("index");
 	}
 		return mav;

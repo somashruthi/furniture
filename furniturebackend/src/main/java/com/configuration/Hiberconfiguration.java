@@ -13,11 +13,16 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.dao.SupplierDAO;
+import com.domain.*;
+import com.dao.*;
+import com.daoimpl.*;
+/*import com.dao.SupplierDAO;
 import com.dao.UserDAO;
 import com.daoimpl.SupplierDAOImpl;
 import com.daoimpl.UserDAOImpl;
-import com.domain.User;
+import com.domain.Category;
+import com.domain.Supplier;
+import com.domain.User;*/
 
 
 @Configuration
@@ -68,6 +73,12 @@ public class Hiberconfiguration
 		
 		slfb.addAnnotatedClass(User.class);
 		
+		slfb.addAnnotatedClass(Supplier.class);
+		
+		slfb.addAnnotatedClass(Category.class);
+		
+		slfb.addAnnotatedClass(Product.class);
+		
 		System.out.println("Session Factory created....");
 		return slfb.buildSessionFactory();
 		
@@ -81,7 +92,7 @@ public class Hiberconfiguration
 		
 	}
 	
-	@Bean
+	/*@Bean
 	public UserDAO getUserDAO(SessionFactory sessionFactory)
 	{
 		return new UserDAOImpl(sessionFactory);
@@ -91,6 +102,6 @@ public class Hiberconfiguration
 	public SupplierDAO getSupplierDAO(SessionFactory sessionFactory)
 	{
 		return new SupplierDAOImpl(sessionFactory);
-	}
+	}*/
 	
 }

@@ -41,7 +41,7 @@ static CategoryDAO categoryDAO;
 		category.setCname("shruthi");
 
 
-		assertTrue("problem in User", categoryDAO.addCategory(category));
+		assertTrue("problem in Category", categoryDAO.addCategory(category));
 		
 		System.out.println("Ending..... into Creating Category....");
 		
@@ -49,5 +49,4 @@ static CategoryDAO categoryDAO;
 
 	
 }
-
 

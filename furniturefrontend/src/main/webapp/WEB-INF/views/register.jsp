@@ -1,8 +1,8 @@
-<%@ talib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<%@ talib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
-<%@ talib prefix="form" uri="http://www.springframework.org/tag/form"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tag/form"%>
 
 
 <!doctype html>
@@ -26,7 +26,7 @@
 <div class="col-lg-8">
 <div class="row">
 
-<form:form  modelAttribute="user1" action="saveRegister" method="post">
+<form:form  modelAttribute="user" action="saveRegister" method="post">
 <div class="form-group">
 <label>Name:</label><br>
 <form:input path="name" class="form-control" placeholder="Enter your name"/>
