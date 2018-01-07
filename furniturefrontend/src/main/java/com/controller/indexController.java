@@ -17,7 +17,7 @@ public class indexController
 
 	@Autowired
 	UserDAOImpl userDAOImpl;
-	
+		
 	@RequestMapping("/")
 	public String index()
 	{
@@ -38,7 +38,7 @@ public class indexController
 	public ModelAndView saveRegister(@ModelAttribute ("user")User user,BindingResult result)
 	{
 		ModelAndView mav=new ModelAndView();
-		
+		    
 	if(result.hasErrors())
 	{
 		mav.setViewName("register");
