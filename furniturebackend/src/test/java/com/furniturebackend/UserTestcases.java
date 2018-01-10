@@ -6,13 +6,12 @@ import org.junit.Test;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.dao.UserDAO;
-import com.domain.User;
+
 
 public class UserTestcases
 {
 
-
+/*
 	static UserDAO userDAO;
 	
 	@BeforeClass
@@ -50,5 +49,5 @@ public class UserTestcases
 		System.out.println("Ending..... into Createing User....");
 		
 	}
-                                                                                                                                                                                                        
+  */                                                                                                                                                                                                      
 }

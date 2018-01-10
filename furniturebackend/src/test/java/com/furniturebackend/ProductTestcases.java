@@ -6,14 +6,12 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.dao.ProductDAO;
-import com.domain.Product;
 
 
 
 public class ProductTestcases
 {
-	
+/*	
 static ProductDAO productDAO;
 	
 	@BeforeClass
@@ -51,5 +49,5 @@ static ProductDAO productDAO;
 		
 	}
 
-	
+	*/
 }

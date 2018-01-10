@@ -102,7 +102,6 @@ return new SupplierDaoImpl(sessionFactory);
 }
 
 
-
 @Autowired
 @Bean(name = "transactionManager")			//spring-orm
 public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) 

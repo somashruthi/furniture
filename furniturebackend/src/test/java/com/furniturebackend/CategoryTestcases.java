@@ -6,19 +6,16 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.dao.CategoryDAO;
-import com.domain.Category;
-
-
 
 public class CategoryTestcases 
 {
+	/*
 static CategoryDAO categoryDAO;
 	
 	@BeforeClass
 	public static void initialize()
 	{
-		System.out.println("Starting into Initiailze User Test case ");
+		System.out.println("Starting into Initialize Category Test case ");
 		
 		AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext();
 		
@@ -46,7 +43,7 @@ static CategoryDAO categoryDAO;
 		System.out.println("Ending..... into Creating Category....");
 		
 	}
-
+*/
 	
 }
 

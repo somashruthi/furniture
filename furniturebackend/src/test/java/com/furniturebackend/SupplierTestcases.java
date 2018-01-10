@@ -4,13 +4,11 @@ import static org.junit.Assert.assertTrue;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import com.dao.SupplierDAO;
-import com.domain.Supplier;
-//import com.domain.Supplier;
+
 
 public class SupplierTestcases
 {
-	
+/*	
 	
 	static SupplierDAO supplierDAO;
 	
@@ -46,5 +44,5 @@ public class SupplierTestcases
 		
 	}
 
-	
+	*/
 }
