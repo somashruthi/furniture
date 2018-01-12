@@ -40,15 +40,15 @@ background-image: url("resources/images/wall2.jpg");
 <div class="carousel-inner">
 <div class="carousel-inner" role="listbox" style=" width:100%; height: 500px !important;">
 <div class="item active">
-<img src="resources/images/image 1.jpg" style="width:100%; height:50%">
+<img src="resources/images/r1.jpg" style="width:100%; height:50%">
 
 </div>
 <div class="item">
-<img src="resources/images/image 2.jpg" style="width:100%;height:50%">
+<img src="resources/images/p8.jpg" style="width:100%;height:50%">
 
 </div>
 <div class="item">
-<img src="resources/images/image 3.jpeg" style="width:100%;height:20%">
+<img src="resources/images/p9.jpeg" style="width:100%;height:20%">
 </div>
 </div>
 </div>
